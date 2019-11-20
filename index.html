@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Paint Clone</title>
+</head>
+<body>
+    <div id="controls">
+        <div id="clear" class="container">
+            <p><input type="button" id="clear-canvas" value="Clear"></p>
+            <input type="file" id="img-file">
+            <p class="name">Setting</p>
+        </div>
+        <div id="size" class="container">
+            <p><label>Width</label><input type="number" id="canvas-width" value="800" min="0"></p>
+            <p><label>Height</label><input type="number" id="canvas-height" value="480" min="0"></p>
+            <p class="name">Size</p>
+        </div>
+        <div id="mouse-position" class="container">
+                <p><label>MouseX: </label><label id="mouseX"> 0 </label></p>
+                <p><label>MouseY: </label><label id="mouseY"> 0 </label></p>
+                <p class="name">Position</p>
+            </div>
+        <div id="tools" class="container">
+            <div id="tool-images">
+                <img id="pencil" src="pencil.png" alt="pencil" style="width: 22px;">
+                <img id="eraser" src="eraser.png" alt="eraser" style="width: 22px;">
+            </div>
+            <p class="name">Tools</p>
+        </div>
+        <div id="tool-size" class="container">
+            <details open>
+                <summary>Size</summary>
+                <ul>
+                    <li id="small">Small</li>
+                    <li id="middle">Medium</li>
+                    <li id="big">Large</li>
+                </ul>
+            </details>
+            <p class="name">Tool size</p>
+        </div>
+        <div id="color" class="container">
+            <input type="color">
+            <p class="name">Color</p>
+        </div>
+        <div class="clear"></div>
+    <div id="canvases">
+        <canvas id="back-canvas" width="800" height="480"></canvas>
+        <canvas id="front-canvas" width="800" height="480"></canvas>
+    </div>
+    <div id="properties">
+        <p id="properties-title">Images</p>
+        <p><label>Width : </label><input id="img-width" type="number" min="0"></p>
+        <p><label>Height : </label><input id="img-height" type="number" min="0"></p>
+    </div>   
+</body>
+<script src="script.js"></script>
+</html>
